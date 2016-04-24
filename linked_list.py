@@ -34,3 +34,25 @@ class LinkedList:
         temp.setNext(self.head)
         #Changes the next references of the new node to refer to the old first node of the list
         self.head = temp
+
+    def size(self):
+        current_node = self.head
+        count = 0
+
+        while current_node is not None:
+            current_node += 1
+            current_node.getNext()
+
+        return count
+
+    def search(self, item):
+        current_node = self.head
+        found = False
+
+        while current_node is not None and found is False:
+            if current_node.getData() == item:
+                found = True
+            else:
+                current_node = current_node.getNext()
+
+            return found
