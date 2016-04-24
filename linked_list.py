@@ -56,3 +56,25 @@ class LinkedList:
                 current_node = current_node.getNext()
 
             return found
+
+    def remove(self, item):
+        current_node = self.head
+        previous = None #provding us with node whose next reference must be changed
+        found = False
+
+        while found is False:
+            if current_node.getData() == item:
+                found = True
+            else:
+                #inch-worming:
+                #previous catches up to current
+                #before current moves ahead
+                previous = current_node
+                current_node = current_node.getNext()
+        #special-case when item to be removed happens
+        #to be the head (when found is True and previous is None)
+        if previous is None:
+            self.head = current_node.getNext()
+        else:
+            #node to be removed somwhere down the LL structure
+            previous.setNext(current_node.getNext())
