@@ -1,3 +1,4 @@
+from test import testEqual
 class Stack:
     """LIFO array where top is the end of list"""
     def __init__(self):
@@ -33,3 +34,25 @@ class Stack:
 
     def size(self):
         return len(self.items)
+
+#reverse a string using a Stack
+#create stack
+#loop over chars, pushing them out one at a time
+#while not is empty
+#pop them off and concatenate them into empty string
+
+
+def revstring(mystr):
+    myStack = Stack()
+
+    for char in str:
+        myStack.push(char)
+
+    revstr = ""
+
+    while not myStack.isEmpty():
+        revstr += myStack.pop()
+
+    return revstr
+
+
