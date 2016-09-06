@@ -14,3 +14,9 @@ class Fraction:
         newden = self.den * otherfraction.den
 
         return Fraction(newnum, newden)
+
+    def __eq__(self, one, two)
+        self.one = one
+        self.two = two
+
+        return

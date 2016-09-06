@@ -1,4 +1,4 @@
-from test import testEqual
+
 class Stack:
     """LIFO array where top is the end of list"""
     def __init__(self):
@@ -41,18 +41,15 @@ class Stack:
 #while not is empty
 #pop them off and concatenate them into empty string
 
+    def revstring(mystr):
+        myStack = Stack()
 
-def revstring(mystr):
-    myStack = Stack()
+        for char in str:
+            myStack.push(char)
 
-    for char in str:
-        myStack.push(char)
+        revstr = ""
 
-    revstr = ""
+        while not myStack.isEmpty():
+            revstr += myStack.pop()
 
-    while not myStack.isEmpty():
-        revstr += myStack.pop()
-
-    return revstr
-
-
+        return revstr
